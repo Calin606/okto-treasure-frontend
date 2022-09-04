@@ -15,8 +15,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
-    - run: npm install
-    - run: CI=false npm run build
+    - run: yarn install
+    - run: CI=false yarn run build
     - uses: jakejarvis/s3-sync-action@master
       with:
         args: --acl private --follow-symlinks --delete
